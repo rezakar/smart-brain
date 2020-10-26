@@ -28,6 +28,8 @@ db.select('*').from('users').then(data => {
 
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {res.send('it is working!')})
+
 // signin
 app.post('/signin', (req, res) => {signin.handleSignin(req, res, db, bcrypt)})
 
