@@ -39,7 +39,7 @@ app.use(bodyParser.json());
 
 app.get('/', (req, res) => {res.send('it is working!')})
 
-// signin
+// signin the users if exist give the message
 app.post('/signin', (req, res) => {signin.handleSignin(req, res, db, bcrypt)})
 
 //register a user and if is douplicate send error message and hash the password
